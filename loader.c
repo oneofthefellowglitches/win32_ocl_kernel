@@ -15,7 +15,6 @@ char* load_kernel_source_win32(const char* filename) {
         return NULL;
     }
 
-    // Allocate from process heap (no malloc)
     char* buffer = (char*)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, (size_t)fileSize + 1);
     if (buffer) {
         DWORD bytesRead;
